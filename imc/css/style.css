@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --fonte: 'Poppins', sans-serif;
+  --cor-primaria: #1e72d1;
+  --cor-fundo: #f5f7fa;
+  --cor-input-bg: #fff;
+  --cor-input-borda: #ccc;
+  --cor-input-borda-focus: var(--cor-primaria);
+  --cor-texto: #333;
+  --cor-botao-bg: var(--cor-primaria);
+  --cor-botao-hover: #1558a0;
+  --cor-botao-texto: #fff;
+  --radius: 10px;
+  --sombra: rgba(0, 0, 0, 0.425);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--fonte);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cor-fundo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--cor-texto);
+}
+
+form {
+  background-color: var(--cor-input-bg);
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--cor-primaria);
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1.5px solid var(--cor-input-borda);
+  border-radius: var(--radius);
+  background-color: var(--cor-input-bg);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+input:focus {
+  border-color: var(--cor-input-borda-focus);
+  box-shadow: 0 0 5px var(--cor-input-borda-focus);
+  outline: none;
+}
+
+button {
+  background-color: var(--cor-botao-bg);
+  color: var(--cor-botao-texto);
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--cor-botao-hover);
+  outline: none;
+}
+
+.resultado {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-align: center;
+  min-height: 48px;
+  color: var(--cor-primaria);
+}
+
+@media (max-width: 450px) {
+  form {
+    padding: 20px;
+  }
+}
